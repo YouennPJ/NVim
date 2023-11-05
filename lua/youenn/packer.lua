@@ -46,6 +46,9 @@ return require('packer').startup(function(use)
   
   use("akinsho/toggleterm.nvim")
   use("stevearc/dressing.nvim")
+  use('neovim/nvim-lspconfig')
+  use('jose-elias-alvarez/null-ls.nvim')
+  use('MunifTanjim/prettier.nvim')
   use{
       'hrsh7th/nvim-cmp',
       requires = {
@@ -57,4 +60,6 @@ return require('packer').startup(function(use)
           {"onsails/lspkind.nvim"},
       }
   }
+  use('javiorfo/nvim-soil')
+  use('javiorfo/nvim-nyctophilia')
 end)
