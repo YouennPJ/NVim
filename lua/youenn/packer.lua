@@ -4,8 +4,8 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-  -- Packer can manage itself
   use 'wbthomason/packer.nvim'
+  use 'ThePrimeagen/vim-be-good'
 
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.3',
@@ -23,7 +23,6 @@ return require('packer').startup(function(use)
   use("theprimeagen/harpoon")
   use("mbbill/undotree")
   use("tpope/vim-fugitive")
-
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v3.x',
@@ -31,7 +30,6 @@ return require('packer').startup(function(use)
 		  --- Uncomment these if you want to manage LSP servers from neovim
 		  -- {'williamboman/mason.nvim'},
 		  -- {'williamboman/mason-lspconfig.nvim'},
-
 		  -- LSP Support
 		  {'neovim/nvim-lspconfig'},
 		  -- Autocompletion
@@ -43,7 +41,6 @@ return require('packer').startup(function(use)
   use("williamboman/mason.nvim")
   use("williamboman/mason-lspconfig.nvim")
   use("nvim-tree/nvim-web-devicons")
-  
   use("akinsho/toggleterm.nvim")
   use("stevearc/dressing.nvim")
   use('neovim/nvim-lspconfig')
@@ -62,4 +59,9 @@ return require('packer').startup(function(use)
   }
   use('javiorfo/nvim-soil')
   use('javiorfo/nvim-nyctophilia')
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 end)
