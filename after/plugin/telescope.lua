@@ -12,6 +12,7 @@ local telescope = require("telescope")
 local actions = require("telescope.actions")
 telescope.setup({
     defaults = {
+        file_ignore_patterns = {"public", "nodes_modules", "build", "dist"},
         path_display = { "truncate " },
         mappings = {
             i = {

@@ -6,7 +6,6 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'ThePrimeagen/vim-be-good'
-
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.3',
 	  -- or                            , branch = '0.1.x',
@@ -59,9 +58,16 @@ return require('packer').startup(function(use)
   }
   use('javiorfo/nvim-soil')
   use('javiorfo/nvim-nyctophilia')
-  use({
-    "iamcco/markdown-preview.nvim",
-    run = function() vim.fn["mkdp#util#install"]() end,
-  })
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+  use {
+  "ahmedkhalf/project.nvim",
+  config = function()
+    require("project_nvim").setup {
+        require('telescope').load_extension('projects')
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  end
+}
 end)
