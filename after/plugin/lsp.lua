@@ -21,16 +21,7 @@ end
 local lspconfig = require('lspconfig')
 lspconfig.pyright.setup {}
 lspconfig.tsserver.setup {
-  handlers = {
-    ['textDocument/definition'] = function(err, result, method, ...)
-      if vim.tbl_islist(result) and #result > 1 then
-        local filtered_result = filter(result, filterReactDTS)
-        return vim.lsp.handlers['textDocument/definition'](err, filtered_result, method, ...)
-      end
 
-      vim.lsp.handlers['textDocument/definition'](err, result, method, ...)
-    end
-  }
 }
 lspconfig.jdtls.setup{ cmd = { 'jdtls' } }
 lspconfig.rust_analyzer.setup {

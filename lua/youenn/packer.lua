@@ -29,7 +29,6 @@ return require('packer').startup(function(use)
   use("nvim-tree/nvim-web-devicons")
   use("akinsho/toggleterm.nvim")
   use("stevearc/dressing.nvim")
-  use('neovim/nvim-lspconfig')
   use('jose-elias-alvarez/null-ls.nvim')
   use{
       'hrsh7th/nvim-cmp',
@@ -55,5 +54,6 @@ return require('packer').startup(function(use)
       -- refer to the configuration section below
     }
   end
-}
+  }
+  use{"Dhanus3133/LeetBuddy.nvim"}
 end)

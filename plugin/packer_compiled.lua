@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["LeetBuddy.nvim"] = {
+    loaded = true,
+    path = "/home/youenn.pierre-justin/.local/share/nvim/site/pack/packer/start/LeetBuddy.nvim",
+    url = "https://github.com/Dhanus3133/LeetBuddy.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/home/youenn.pierre-justin/.local/share/nvim/site/pack/packer/start/LuaSnip",
