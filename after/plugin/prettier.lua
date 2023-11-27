@@ -29,6 +29,8 @@ prettier.setup({
       jsxSingleQuote= false,
       insertPragma= false,
       endOfLine= "lf",
-      useTabs= false
+      useTabs= false,
+      config_precedence = "prefer-file",
+      ignore_path = "*.tsx",
   }
 })
