@@ -21,7 +21,8 @@ end
 local lspconfig = require('lspconfig')
 lspconfig.pyright.setup {}
 lspconfig.tsserver.setup {
-
+    on_attach = on_attach,
+    flags = lsp_flags,
 }
 lspconfig.jdtls.setup{ cmd = { 'jdtls' } }
 lspconfig.rust_analyzer.setup {

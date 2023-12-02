@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/home/youenn.pierre-justin/.local/share/nvim/site/pack/packer/start/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/home/youenn.pierre-justin/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
   ["cmp-path"] = {
     loaded = true,
     path = "/home/youenn.pierre-justin/.local/share/nvim/site/pack/packer/start/cmp-path",
