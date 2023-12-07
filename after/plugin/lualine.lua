@@ -18,10 +18,13 @@ require('lualine').setup {
     }
   },
   sections = {
-    lualine_a = {'mode'},
-    lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_c = {'filename'},
-    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_a = {{'mode',fmt = function(str) return str:sub(1,1) end } },
+    lualine_b = {{'branch',fmt = function(str) return str:sub(1,20) end}, 'diff', 'diagnostics'},
+    lualine_c = {
+            {'filename',
+            path = 1}
+    },
+    lualine_x = {'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'}
   },
