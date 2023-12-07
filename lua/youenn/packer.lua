@@ -1,6 +1,3 @@
---This file can be loaded by calling `lua require('plugins')` from your init.vim
-
--- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
@@ -8,7 +5,6 @@ return require('packer').startup(function(use)
   use 'ThePrimeagen/vim-be-good'
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.3',
-	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
   use({ 'rose-pine/neovim', as = 'rose-pine' })
@@ -43,6 +39,7 @@ return require('packer').startup(function(use)
           {"onsails/lspkind.nvim"},
       }
   }
+  use 'mfussenegger/nvim-jdtls'
   use('javiorfo/nvim-soil')
   use('javiorfo/nvim-nyctophilia')
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
@@ -51,9 +48,6 @@ return require('packer').startup(function(use)
   config = function()
     require("project_nvim").setup {
         require('telescope').load_extension('projects')
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
     }
   end
   }
