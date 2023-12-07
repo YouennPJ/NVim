@@ -24,7 +24,7 @@ lspconfig.tsserver.setup {
     on_attach = on_attach,
     flags = lsp_flags,
 }
-lspconfig.jdtls.setup{ cmd = { 'jdtls' } }
+lspconfig.jdtls.setup{}
 lspconfig.rust_analyzer.setup {
   -- Server-specific settings. See `:help lspconfig-setup`
   settings = {
