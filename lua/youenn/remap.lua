@@ -45,3 +45,5 @@ vim.keymap.set("n", "<leader><leader>", function()
 end)
 
 vim.keymap.set("n", "<Esc>", "<C-\\><C-n>"); 
+
+vim.keymap.set("n", "<leader>cl", 'iconsole.log("")<Esc>hha')
