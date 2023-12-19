@@ -25,6 +25,7 @@ lspconfig.tsserver.setup {
     flags = lsp_flags,
 }
 lspconfig.jdtls.setup{}
+lspconfig.clangd.setup{}
 lspconfig.rust_analyzer.setup {
   -- Server-specific settings. See `:help lspconfig-setup`
   settings = {
