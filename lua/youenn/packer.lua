@@ -42,8 +42,15 @@ return require('packer').startup(function(use)
     use 'mfussenegger/nvim-jdtls'
     use('javiorfo/nvim-soil')
     use('javiorfo/nvim-nyctophilia')
-    use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = {
-            "markdown" } end, ft = { "markdown" }, })
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = "cd app && npm install",
+        setup = function()
+            vim.g.mkdp_filetypes = {
+                "markdown" }
+        end,
+        ft = { "markdown" },
+    })
     use {
         "ahmedkhalf/project.nvim",
         config = function()
