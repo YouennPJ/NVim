@@ -9,7 +9,8 @@ Here are the extra dependencies to manage outside of the those handled by packer
 + Prettier (npm global install)
 + Lombok (for extensive java support)
 
-
+Languages servers also need to be installed:
++ `brew install lua-language-server`
 
 
 Configuration inspired by theprimeagen Neovim from scratch tutorial

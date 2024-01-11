@@ -29,13 +29,13 @@ return require('packer').startup(function(use)
   use{
       'hrsh7th/nvim-cmp',
       requires = {
-          {"hrsh7th/cmp-buffer"},   
-          {"hrsh7th/cmp-path"},  
+          {"hrsh7th/cmp-buffer"},
+          {"hrsh7th/cmp-path"},
           {"hrsh7th/cmp-cmdline"},
           {"hrsh7th/cmp-nvim-lsp"},
-          {"L3MON4D3/LuaSnip"},   
-          {"saadparwaiz1/cmp_luasnip"},  
-          {"rafamadriz/friendly-snippets"},  
+          {"L3MON4D3/LuaSnip"},
+          {"saadparwaiz1/cmp_luasnip"},
+          {"rafamadriz/friendly-snippets"},
           {"onsails/lspkind.nvim"},
       }
   }
@@ -59,4 +59,11 @@ return require('packer').startup(function(use)
   use{"lewis6991/gitsigns.nvim"}
   use 'ggandor/lightspeed.nvim'
   use 'vimpostor/vim-tpipeline'
+  use{
+      'weirongxu/plantuml-previewer.vim',
+      requires = {
+          {"tyru/open-browser.vim"},
+          {"aklt/plantuml-syntax"},
+      }
+  }
 end)
