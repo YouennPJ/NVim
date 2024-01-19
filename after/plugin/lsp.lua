@@ -19,7 +19,7 @@ local function filterReactpTS(value)
 end
 
 local lspconfig = require('lspconfig')
-lspconfig.pyright.setup {}
+lspconfig.jedi_language_server.setup {}
 lspconfig.tsserver.setup {
     on_attach = on_attach,
     flags = lsp_flags,
