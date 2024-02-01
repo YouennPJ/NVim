@@ -74,4 +74,5 @@ return require('packer').startup(function(use)
             { "aklt/plantuml-syntax" },
         }
     }
+    use 'averms/black-nvim'
 end)
