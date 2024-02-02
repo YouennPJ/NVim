@@ -15,13 +15,6 @@ vim.keymap.set("n", "<leader>ssv", "<cmd>vs<CR>")
 vim.keymap.set("n", "<leader>ssh", "<cmd>sp<CR>")
 vim.keymap.set("n", "<leader>qf", "<cmd>q<CR>")
 
-vim.keymap.set("n", "<leader>vwm", function()
-    require("vim-with-me").StartVimWithMe()
-end)
-vim.keymap.set("n", "<leader>svwm", function()
-    require("vim-with-me").StopVimWithMe()
-end)
-
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- Yank into "+" register (clipboard)
