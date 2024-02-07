@@ -13,6 +13,7 @@ Languages servers also need to be installed:
 + `brew install lua-language-server`
 + `brew install jdlts`
 + `pip install black`
++ `pip install jedi-language-server`
 
 
 Configuration inspired by theprimeagen Neovim from scratch tutorial
