@@ -12,6 +12,7 @@ Here are the extra dependencies to manage outside of the those handled by packer
 Languages servers also need to be installed:
 + `brew install lua-language-server`
 + `brew install jdlts`
++ `brew install llvm` or `sudo apt-get install clangd-12` (Linux)
 + `pip install black`
 + `pip install jedi-language-server`
 
