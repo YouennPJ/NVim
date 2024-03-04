@@ -11,6 +11,7 @@ Here are the extra dependencies to manage outside of the those handled by packer
 
 Languages servers also need to be installed:
 + `brew install lua-language-server`
++ `npm i -g diagnostic-languageserver`
 + `brew install jdlts`
 + `pip install black`
 
