@@ -20,6 +20,21 @@ end
 
 local lspconfig = require('lspconfig')
 lspconfig.jedi_language_server.setup {}
+lspconfig.diagnosticls.setup {
+    filetypes = { "python" },
+    init_options = {
+        formatters = {
+            black = {
+                command = "black",
+                args = { "--quiet", "-" },
+                rootPatterns = { "pyproject.toml" },
+            },
+        },
+        formatFiletypes = {
+            python = { "black" }
+        }
+    }
+}
 lspconfig.tsserver.setup {
     on_attach = on_attach,
     flags = lsp_flags,
