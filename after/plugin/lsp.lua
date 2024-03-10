@@ -26,7 +26,7 @@ lspconfig.diagnosticls.setup {
         formatters = {
             black = {
                 command = "black",
-                args = { "--quiet", "-" },
+                args = { "--quiet","--line-length 79", "-" },
                 rootPatterns = { "pyproject.toml" },
             },
         },
