@@ -20,8 +20,6 @@ return require('packer').startup(function(use)
     use("tpope/vim-fugitive")
     use { 'neovim/nvim-lspconfig' }
     use('MunifTanjim/prettier.nvim')
-    use("williamboman/mason.nvim")
-    use("williamboman/mason-lspconfig.nvim")
     use("nvim-tree/nvim-web-devicons")
     use("akinsho/toggleterm.nvim")
     use("stevearc/dressing.nvim")
