@@ -1,7 +1,16 @@
+local on_attach = function(client, bufnr)
+    require("lsp-format").on_attach(client, bufnr)
+end
 
 local lspconfig = require('lspconfig')
-lspconfig.jedi_language_server.setup {}
+lspconfig.jedi_language_server.setup {
+    on_attach = on_attach,
+}
+lspconfig.svelte.setup {
+    on_attach = on_attach,
+}
 lspconfig.diagnosticls.setup {
+    on_attach = on_attach,
     filetypes = { "python" },
     init_options = {
         formatters = {
@@ -18,25 +27,27 @@ lspconfig.diagnosticls.setup {
 }
 lspconfig.tsserver.setup {
     on_attach = on_attach,
-    flags = lsp_flags,
 }
-lspconfig.jdtls.setup {}
-lspconfig.clangd.setup {}
+lspconfig.jdtls.setup {
+    on_attach = on_attach,
+}
+lspconfig.clangd.setup {
+    on_attach = on_attach,
+}
 lspconfig.rust_analyzer.setup {
-    -- Server-specific settings. See `:help lspconfig-setup`
+    on_attach = on_attach,
     settings = {
         ['rust-analyzer'] = {},
     },
 }
 lspconfig.lua_ls.setup {
+    on_attach = on_attach,
     on_init = function(client)
         local path = client.workspace_folders[1].name
         if not vim.loop.fs_stat(path .. '/.luarc.json') and not vim.loop.fs_stat(path .. '/.luarc.jsonc') then
             client.config.settings = vim.tbl_deep_extend('force', client.config.settings, {
                 Lua = {
                     runtime = {
-                        -- Tell the language server which version of Lua you're using
-                        -- (most likely LuaJIT in the case of Neovim)
                         version = 'LuaJIT'
                     },
                     -- Make the server aware of Neovim runtime files
@@ -47,8 +58,6 @@ lspconfig.lua_ls.setup {
                             -- "${3rd}/luv/library"
                             -- "${3rd}/busted/library",
                         }
-                        -- or pull in all of 'runtimepath'. NOTE: this is a lot slower
-                        -- library = vim.api.nvim_get_runtime_file("", true)
                     }
                 }
             })
@@ -59,8 +68,6 @@ lspconfig.lua_ls.setup {
     end
 }
 
--- Global mappings.
--- See `:help vim.diagnostic.*` for documentation on any of the below functions
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)

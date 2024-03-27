@@ -73,4 +73,5 @@ return require('packer').startup(function(use)
         }
     }
     use 'averms/black-nvim'
+    use "lukas-reineke/lsp-format.nvim"
 end)
