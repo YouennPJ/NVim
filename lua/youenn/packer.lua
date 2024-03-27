@@ -23,7 +23,7 @@ return require('packer').startup(function(use)
     use("nvim-tree/nvim-web-devicons")
     use("akinsho/toggleterm.nvim")
     use("stevearc/dressing.nvim")
-    use('jose-elias-alvarez/null-ls.nvim')
+    use('nvimtools/none-ls.nvim')
     use {
         'hrsh7th/nvim-cmp',
         requires = {
