@@ -19,5 +19,14 @@ Languages servers also need to be installed:
 + Python: `pip install jedi-language-server`
 + Svelte: `npm install -g svelte-language-server`
 
+The following can also be installed for those extra functionnalities:
++ Xmllint: allows format of xml files
+```bash
+sudo apt install libxml2-utils
+# MacOs
+brew install xmlstarlet
+```
+The following command is then required: `:set equalprg=xmllint\ --format\ -`
+
 
 Configuration inspired by theprimeagen Neovim from scratch tutorial
