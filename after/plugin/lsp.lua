@@ -33,6 +33,17 @@ lspconfig.jdtls.setup {
 }
 lspconfig.clangd.setup {
     on_attach = on_attach,
+    cmd = {
+        "clangd",
+        "--clang-tidy",
+        "--header-insertion=iwyu",
+        "--header-insertion-decorators",
+        "--pch-storage=memory",
+        "--enable-config"
+    },
+    flags = {
+        debounce_text_changes = 150,
+    }
 }
 lspconfig.rust_analyzer.setup {
     on_attach = on_attach,
