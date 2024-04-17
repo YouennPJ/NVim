@@ -7,6 +7,7 @@ lspconfig.jedi_language_server.setup {
     on_attach = on_attach,
 }
 lspconfig.svelte.setup {}
+lspconfig.bashls.setup {}
 lspconfig.diagnosticls.setup {
     on_attach = on_attach,
     filetypes = { "python" },
