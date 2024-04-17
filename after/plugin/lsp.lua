@@ -6,9 +6,7 @@ local lspconfig = require('lspconfig')
 lspconfig.jedi_language_server.setup {
     on_attach = on_attach,
 }
-lspconfig.svelte.setup {
-    on_attach = on_attach,
-}
+lspconfig.svelte.setup {}
 lspconfig.diagnosticls.setup {
     on_attach = on_attach,
     filetypes = { "python" },
@@ -25,9 +23,7 @@ lspconfig.diagnosticls.setup {
         }
     }
 }
-lspconfig.tsserver.setup {
-    on_attach = on_attach,
-}
+lspconfig.tsserver.setup {}
 lspconfig.jdtls.setup {
     on_attach = on_attach,
 }
