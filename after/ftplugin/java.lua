@@ -25,4 +25,4 @@ function BuildMavenProject()
     end
 end
 
-vim.api.nvim_buf_set_keymap(0, "n", "<F8>", ":lua BuildMavenProject()<CR>", { silent = true })
+vim.api.nvim_buf_set_keymap(0, "n", "<leader>rl", ":lua BuildMavenProject()<CR>", { silent = true })
