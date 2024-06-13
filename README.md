@@ -17,10 +17,11 @@ Languages servers also need to be installed:
 + Python: `npm i -g diagnostic-languageserver`
 + Python: `pip install black`
 + Python: `pip install jedi-language-server`
++ Bash: `npm i -g bash-language-server`
 + Svelte: `npm install -g svelte-language-server`
 
 The following can also be installed for those extra functionnalities:
-+ Xmllint: allows format of xml files
++ Xmllint: allows format of xml files using the nvim built-in not lsp
 ```bash
 sudo apt install libxml2-utils
 # MacOs
