@@ -8,6 +8,7 @@ Here are the extra dependencies to manage outside of the those handled by packer
 + Java (just need jdk to install prettier)
 + Prettier (npm global install)
 + Lombok (for extensive java support)
++ Opam (for ocaml)
 
 Languages servers also need to be installed:
 + Typescript: `npm install -g typescript typescript-language-server`
@@ -19,6 +20,7 @@ Languages servers also need to be installed:
 + Python: `pip install jedi-language-server`
 + Bash: `npm i -g bash-language-server`
 + Svelte: `npm install -g svelte-language-server`
++ Ocaml: `opam install ocaml-lsp-server`
 
 The following can also be installed for those extra functionnalities:
 + Xmllint: allows format of xml files using the nvim built-in not lsp

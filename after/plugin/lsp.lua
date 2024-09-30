@@ -8,6 +8,8 @@ lspconfig.jedi_language_server.setup {
 }
 lspconfig.svelte.setup {}
 lspconfig.bashls.setup {}
+lspconfig.ocamllsp.setup {
+}
 lspconfig.diagnosticls.setup {
     on_attach = on_attach,
     filetypes = { "python" },
@@ -24,7 +26,8 @@ lspconfig.diagnosticls.setup {
         }
     }
 }
-lspconfig.tsserver.setup {}
+lspconfig.tsserver.setup {
+}
 lspconfig.jdtls.setup {
     on_attach = on_attach,
 }
