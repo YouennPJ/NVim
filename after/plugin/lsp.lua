@@ -26,7 +26,6 @@ lspconfig.diagnosticls.setup {
 }
 lspconfig.tsserver.setup {}
 lspconfig.jdtls.setup {
-    on_attach = on_attach,
 }
 lspconfig.clangd.setup {
     on_attach = on_attach,
