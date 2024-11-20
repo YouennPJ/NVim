@@ -26,7 +26,7 @@ lspconfig.diagnosticls.setup {
         }
     }
 }
-lspconfig.tsserver.setup {
+lspconfig.ts_ls.setup {
 }
 lspconfig.jdtls.setup {
 }
