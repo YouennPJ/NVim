@@ -42,3 +42,9 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 vim.keymap.set("n", "<Esc>", "<C-\\><C-n>");
+vim.keymap.set(
+    'n',
+    '<leader>tm',
+    ":lua vim.fn.system('tmux split-window -h -c ' .. vim.fn.shellescape(vim.fn.expand('%:p:h')))<CR>",
+    { noremap = true, silent = true }
+)
